@@ -16,7 +16,7 @@ MonoBehaviour:
   attackType: 0
   description: typically in groups
   health: 1
-  speed: -50
+  speed: -100
   hitPower: 1
   actor: {fileID: 2913004151325481229, guid: 9f5a108e930d8f4489f5c61dff962a6a, type: 3}
   actorsBullets: {fileID: 0}

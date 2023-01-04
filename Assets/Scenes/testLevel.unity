@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActorModel: {fileID: 11400000, guid: 28e776b6ba4732540a3cda7a6370aa67, type: 2}
-  SpawnRate: 2
+  SpawnRate: 1
   Quantity: 10
 --- !u!1 &1223754128
 GameObject:
