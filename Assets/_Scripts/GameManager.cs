@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
@@ -50,7 +47,7 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    void CameraSetup() {
+    private void CameraSetup() {
         GameObject gameCamera = GameObject.FindGameObjectWithTag("MainCamera");
 
         gameCamera.transform.position = new Vector3(0, 0, -300);
@@ -60,7 +57,7 @@ public class GameManager : MonoBehaviour {
         gameCamera.GetComponent<Camera>().backgroundColor = new Color32(0, 0, 0, 255);
     }
 
-    void LightSetup() {
+    private void LightSetup() {
         GameObject dirLight = GameObject.Find("Directional Light");
         dirLight.transform.eulerAngles = new Vector3(50, -30, 0);
         dirLight.GetComponent<Light>().color = new Color32(152, 204, 255, 255);
@@ -74,12 +71,5 @@ public class GameManager : MonoBehaviour {
         else {
             Destroy(this.gameObject);
         }
-    }
-
-    void Start() {
-    }
-
-
-    void Update() {
     }
 }

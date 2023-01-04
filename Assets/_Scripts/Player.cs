@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class Player : MonoBehaviour, IActorTemplate {
@@ -37,7 +36,7 @@ public class Player : MonoBehaviour, IActorTemplate {
 
     private void Attack() {
         if (!Input.GetButtonDown("Fire1")) return;
-        GameObject bullet=GameObject.Instantiate(_fire,transform.position,Quaternion.Euler(new Vector3(0,0,0))) as GameObject;
+        GameObject bullet=GameObject.Instantiate(_fire,transform.position,Quaternion.Euler(new Vector3(0,0,0)));
         bullet.transform.SetParent(_Player.transform);
         bullet.transform.localScale = new Vector3(7, 7, 7);
     }
