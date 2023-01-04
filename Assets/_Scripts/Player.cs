@@ -17,7 +17,7 @@ public class Player : MonoBehaviour, IActorTemplate {
         set => _fire = value;
     }
 
-    GameObject _Player;
+    GameObject _player;
     float _width;
     float _height;
 
@@ -26,7 +26,7 @@ public class Player : MonoBehaviour, IActorTemplate {
             _height = 1 / (Camera.main.WorldToViewportPoint(new Vector3(1, 1, 0)).y - 0.5f);
             _width = 1 / (Camera.main.WorldToViewportPoint(new Vector3(1, 1, 0)).x - 0.5f);
         }
-        _Player = GameObject.Find("_Player");
+        _player = GameObject.Find("_Player");
     }
 
     private void Update() {
@@ -37,7 +37,7 @@ public class Player : MonoBehaviour, IActorTemplate {
     private void Attack() {
         if (!Input.GetButtonDown("Fire1")) return;
         GameObject bullet=GameObject.Instantiate(_fire,transform.position,Quaternion.Euler(new Vector3(0,0,0)));
-        bullet.transform.SetParent(_Player.transform);
+        bullet.transform.SetParent(_player.transform);
         bullet.transform.localScale = new Vector3(7, 7, 7);
     }
 
@@ -55,10 +55,10 @@ public class Player : MonoBehaviour, IActorTemplate {
     }
 
     public void ActorStats(SOActorModel actorModel) {
-        _health = actorModel.health;
-        _travelSpeed = actorModel.speed;
-        _hitPower = actorModel.hitPower;
-        _fire = actorModel.actorsBullets;
+        _health = actorModel.Health;
+        _travelSpeed = actorModel.Speed;
+        _hitPower = actorModel.HitPower;
+        _fire = actorModel.ActorsBullets;
     }
 
     private void OnTriggerEnter(Collider other) {

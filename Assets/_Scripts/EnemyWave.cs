@@ -22,8 +22,11 @@ public class EnemyWave : MonoBehaviour, IActorTemplate {
     private void Attack() {
         _time += Time.deltaTime;
         _sineVer.y = Mathf.Sin(_time * VerticalSpeed) * VerticalAmplitude;
-        transform.position = new Vector3(transform.position.x + _travelSpeed * Time.deltaTime,
-            transform.position.y + _sineVer.y, transform.position.z);
+        var transform1 = transform;
+        var position = transform1.position;
+        position = new Vector3(position.x + _travelSpeed * Time.deltaTime,
+            position.y + _sineVer.y, position.z);
+        transform1.position = position;
     }
 
     public int SendDamage() {
@@ -40,9 +43,9 @@ public class EnemyWave : MonoBehaviour, IActorTemplate {
     }
 
     public void ActorStats(SOActorModel actorModel) {
-        _health = actorModel.health;
-        _travelSpeed = actorModel.speed;
-        _hitPower = actorModel.hitPower;
+        _health = actorModel.Health;
+        _travelSpeed = actorModel.Speed;
+        _hitPower = actorModel.HitPower;
 
         _score = actorModel.Score;
     }

@@ -1,27 +1,24 @@
-
-using System;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 public class PlayerSpawner : MonoBehaviour {
-    private SOActorModel actorModel;
-    private GameObject playerShip;
+    private SOActorModel _actorModel;
+    private GameObject _playerShip;
 
     private void Start() {
         CreatePlayer();
     }
 
     void CreatePlayer() {
-        actorModel = Object.Instantiate(Resources.Load("Player_Default")) as SOActorModel;
-        if (actorModel != null) {
-            playerShip = GameObject.Instantiate(actorModel.actor, this.transform, true) as GameObject;
-            playerShip.GetComponent<Player>().ActorStats(actorModel);
+        _actorModel = Instantiate(Resources.Load("Player_Default")) as SOActorModel ;
+        if (_actorModel != null) {
+            _playerShip = Instantiate(_actorModel.Actor, this.transform, true);
+            _playerShip.GetComponent<Player>().ActorStats(_actorModel);
         }
 
-        playerShip.transform.rotation=Quaternion.Euler(0,180,0);
-        playerShip.transform.localScale = new Vector3(60, 60, 60);
-        playerShip.GetComponentInChildren<ParticleSystem>().transform.localScale = new Vector3(25, 25, 25);
-        playerShip.name = "Player";
-        playerShip.transform.position=Vector3.zero;
+        _playerShip.transform.rotation=Quaternion.Euler(0,180,0);
+        _playerShip.transform.localScale = new Vector3(60, 60, 60);
+        _playerShip.GetComponentInChildren<ParticleSystem>().transform.localScale = new Vector3(25, 25, 25);
+        _playerShip.name = "Player";
+        _playerShip.transform.position=Vector3.zero;
     }
 }

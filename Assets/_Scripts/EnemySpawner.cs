@@ -24,9 +24,9 @@ public class EnemySpawner : MonoBehaviour {
     }
 
     private GameObject CreateEnemy() {
-        GameObject enemy=Instantiate(ActorModel.actor);
+        GameObject enemy=Instantiate(ActorModel.Actor);
         enemy.GetComponent<IActorTemplate>().ActorStats(ActorModel);
-        enemy.name = ActorModel.actorName;
+        enemy.name = ActorModel.ActorName;
         return enemy;
     }
 }

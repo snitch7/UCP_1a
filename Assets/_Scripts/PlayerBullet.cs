@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour, IActorTemplate {
-    private GameObject actor;
+    private GameObject _actor;
     private int _hitPower;
     private int _health;
     private int _travelSpeed;
@@ -33,10 +33,10 @@ public class PlayerBullet : MonoBehaviour, IActorTemplate {
     }
 
     public void ActorStats(SOActorModel actorModel) {
-        _hitPower = actorModel.hitPower;
-        _health = actorModel.health;
-        _travelSpeed = actorModel.speed;
-        actor = actorModel.actor;
+        _hitPower = actorModel.HitPower;
+        _health = actorModel.Health;
+        _travelSpeed = actorModel.Speed;
+        _actor = actorModel.Actor;
     }
 
     private void OnTriggerEnter(Collider other) {

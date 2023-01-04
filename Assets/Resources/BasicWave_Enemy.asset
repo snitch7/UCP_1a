@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73b9dabe4e9cae14dad94e9848d6a7d4, type: 3}
   m_Name: BasicWave_Enemy
   m_EditorClassIdentifier: 
-  actorName: enemy_wave
-  attackType: 0
+  ActorName: enemy_wave
+  AttackType: 0
   Score: 200
-  description: 
-  health: 1
-  speed: -150
-  hitPower: 1
-  actor: {fileID: 2913004151325481229, guid: 9f5a108e930d8f4489f5c61dff962a6a, type: 3}
-  actorsBullets: {fileID: 0}
+  Description: 
+  Health: 1
+  Speed: -150
+  HitPower: 1
+  Actor: {fileID: 2913004151325481229, guid: 9f5a108e930d8f4489f5c61dff962a6a, type: 3}
+  ActorsBullets: {fileID: 0}
