@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
+    public static int PlayerLives = 3;
     private static GameManager _instance;
 
     public static GameManager Instance => _instance;
@@ -33,6 +34,19 @@ public class GameManager : MonoBehaviour {
                 CameraSetup();
                 break;
             }
+        }
+    }
+
+    public void LifeLost() {
+        if (PlayerLives>=1) {
+            PlayerLives--;
+            print("Lives left: " + PlayerLives);
+            GetComponent<MyScenesManager>().ResetScene();
+        }
+        else {
+            print("Endscore: "+ GetComponent<ScoreManager>().PlayerScore);
+            PlayerLives = 3;
+            GetComponent<MyScenesManager>().GameOver();
         }
     }
 

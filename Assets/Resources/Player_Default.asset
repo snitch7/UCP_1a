@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actorName: Player
   attackType: 1
-  description: Player default ship
+  description: 
   health: 1
   speed: 120
   hitPower: 1

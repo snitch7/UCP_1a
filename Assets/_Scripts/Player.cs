@@ -27,18 +27,10 @@ public class Player : MonoBehaviour, IActorTemplate {
             _height = 1 / (Camera.main.WorldToViewportPoint(new Vector3(1, 1, 0)).y - 0.5f);
             _width = 1 / (Camera.main.WorldToViewportPoint(new Vector3(1, 1, 0)).x - 0.5f);
         }
-
-        print(_width + "-" + _height);
-        print(_width + _width / 0.9f);
-        print(_width + _width / 6);
-        print(-_height / 3f);
-        print(_height / 2.5f);
         _Player = GameObject.Find("_Player");
     }
 
     private void Update() {
-        print(transform.localPosition);
-        print(Input.GetAxisRaw("Horizontal"));
         Movement();
         Attack();
     }
@@ -60,6 +52,7 @@ public class Player : MonoBehaviour, IActorTemplate {
 
     public void Die() {
         Destroy(this.gameObject);
+        GameManager.Instance.LifeLost();
     }
 
     public void ActorStats(SOActorModel actorModel) {

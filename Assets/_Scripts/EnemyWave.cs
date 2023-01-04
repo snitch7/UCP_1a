@@ -7,6 +7,7 @@ public class EnemyWave : MonoBehaviour, IActorTemplate {
     private int _travelSpeed;
     private int _fireSpeed;
     private int _hitPower;
+    private int _score;
 
     // vars specific to this enemy
     [SerializeField] private float VerticalSpeed = 2;
@@ -36,12 +37,15 @@ public class EnemyWave : MonoBehaviour, IActorTemplate {
 
     public void Die() {
         Destroy(this.gameObject);
+        GameManager.Instance.GetComponent<ScoreManager>().SetScore(_score);
     }
 
     public void ActorStats(SOActorModel actorModel) {
         _health = actorModel.health;
         _travelSpeed = actorModel.speed;
         _hitPower = actorModel.hitPower;
+
+        _score = actorModel.Score;
     }
 
     private void OnTriggerEnter(Collider other) {

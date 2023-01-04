@@ -4,6 +4,7 @@ using UnityEngine;
 public class SOActorModel : ScriptableObject {
     public string actorName;
     public AttackType attackType;
+    public int Score;
 
     public enum AttackType {
         wave, player, flee, bullet
