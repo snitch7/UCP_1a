@@ -35,13 +35,13 @@ public class GameManager : MonoBehaviour {
     }
 
     public void LifeLost() {
-        if (PlayerLives>=1) {
+        if (PlayerLives >= 1) {
             PlayerLives--;
             print("Lives left: " + PlayerLives);
             GetComponent<MyScenesManager>().ResetScene();
         }
         else {
-            print("Endscore: "+ GetComponent<ScoreManager>().PlayerScore);
+            print("Endscore: " + GetComponent<ScoreManager>().PlayerScore);
             PlayerLives = 3;
             GetComponent<MyScenesManager>().GameOver();
         }

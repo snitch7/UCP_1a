@@ -26,6 +26,7 @@ public class Player : MonoBehaviour, IActorTemplate {
             _height = 1 / (Camera.main.WorldToViewportPoint(new Vector3(1, 1, 0)).y - 0.5f);
             _width = 1 / (Camera.main.WorldToViewportPoint(new Vector3(1, 1, 0)).x - 0.5f);
         }
+
         _player = GameObject.Find("_Player");
     }
 
@@ -36,7 +37,7 @@ public class Player : MonoBehaviour, IActorTemplate {
 
     private void Attack() {
         if (!Input.GetButtonDown("Fire1")) return;
-        GameObject bullet=GameObject.Instantiate(_fire,transform.position,Quaternion.Euler(new Vector3(0,0,0)));
+        GameObject bullet = GameObject.Instantiate(_fire, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
         bullet.transform.SetParent(_player.transform);
         bullet.transform.localScale = new Vector3(7, 7, 7);
     }

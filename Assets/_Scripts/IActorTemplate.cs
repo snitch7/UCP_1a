@@ -1,4 +1,3 @@
-
 public interface IActorTemplate {
     int SendDamage();
     void TakeDamage(int incomingDamage);

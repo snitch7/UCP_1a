@@ -1,13 +1,16 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Create Actor",menuName = "Create Actor")]
+[CreateAssetMenu(fileName = "Create Actor", menuName = "Create Actor")]
 public class SOActorModel : ScriptableObject {
     public string ActorName;
     public AttackTypes AttackType;
     public int Score;
 
     public enum AttackTypes {
-        Wave, Player, Flee, Bullet
+        Wave,
+        Player,
+        Flee,
+        Bullet
     }
 
     public string Description;
