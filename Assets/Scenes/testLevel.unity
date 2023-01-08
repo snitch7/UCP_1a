@@ -447,6 +447,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: _SceneAssets
       objectReference: {fileID: 0}
+    - target: {fileID: 1356459550559628938, guid: e19d6ded9ee86ed4dbf43c713b7ac698, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 690
+      objectReference: {fileID: 0}
     - target: {fileID: 4035370842195724152, guid: e19d6ded9ee86ed4dbf43c713b7ac698, type: 3}
       propertyPath: m_RootOrder
       value: 5
