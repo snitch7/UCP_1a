@@ -7,10 +7,10 @@ public class SOActorModel : ScriptableObject {
     public int Score;
 
     public enum AttackTypes {
-        Wave,
-        Player,
-        Flee,
-        Bullet
+        WAVE,
+        PLAYER,
+        FLEE,
+        BULLET
     }
 
     public string Description;
