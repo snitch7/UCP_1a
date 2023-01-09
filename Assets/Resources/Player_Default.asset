@@ -9,15 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73b9dabe4e9cae14dad94e9848d6a7d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 783791bc698c1064d8ecee22848ddfd6, type: 3}
   m_Name: Player_Default
   m_EditorClassIdentifier: 
-  ActorName: player
-  AttackType: 0
-  Score: 0
-  Description: 
-  Health: 1
-  Speed: 120
-  HitPower: 1
-  Actor: {fileID: 3427924789319159783, guid: 9d598b84bb293434da0b460210e4c8b2, type: 3}
-  ActorsBullets: {fileID: 8024005620384854223, guid: 4e8b9839cc4135249a929aae46fc0ea0, type: 3}
+  actorName: Player
+  attackType: 1
+  description: Players default ship.
+  health: 1
+  speed: 120
+  hitPower: 1
+  actor: {fileID: 4056337563198676363, guid: 330c7504f6d6bc94daa2bde9d35c14c2, type: 3}
+  actorBullets: {fileID: 1385417631555635830, guid: a24732e6a41d5564a95ffaf8213d0d67, type: 3}
