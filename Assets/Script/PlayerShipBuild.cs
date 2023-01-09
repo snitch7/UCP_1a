@@ -29,6 +29,8 @@ public class PlayerShipBuild : MonoBehaviour {
 
     private void WatchAdvert() {
         print("watching ad");
+        bank += 300;
+        bankObj.GetComponentInChildren<TextMesh>().text = bank.ToString();
     }
 
 
