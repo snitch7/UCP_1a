@@ -1,18 +1,20 @@
-﻿using UnityEngine.SceneManagement;
+﻿using System;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class LoadSceneComponent : MonoBehaviour 
-{
- float timer = 0;
- public string loadThisScene;
+public class LoadSceneComponent : MonoBehaviour {
+    float _timer = 0;
+    public string _loadThisScene;
 
- void Update()
- {
- timer += Time.deltaTime;
+    private void Start() {
+        GameManager.Instance.GetComponentInChildren<ScoreManager>().ResetScore();
+    }
 
- if (timer > 3)
- {
- SceneManager.LoadScene(loadThisScene);
- }
- }
+    void Update() {
+        _timer += Time.deltaTime;
+
+        if (_timer > 3) {
+            SceneManager.LoadScene(_loadThisScene);
+        }
+    }
 }
